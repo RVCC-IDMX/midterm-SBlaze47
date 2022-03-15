@@ -1,4 +1,67 @@
 /* Journey to the Center of the Earth Practicum*/
 /* Shane Blazovic*/
 
+header{
+
+    text-align: center;
+    font-size: 25px;
+    background-image: url(/img/cave.jpg);
+    color: white;
+    padding: 30px;
+}
+
+nav{
+    border: 3px solid #886644;
+    text-align: center;
+    box-shadow: inset 3px 3px 10px 5px #000;
+    background-color: lightgray;
+    
+}
+
+nav li{
+
+    padding: 10px;
+    display: inline-block; /* https://css-tricks.com/snippets/css/cross-browser-inline-block/ */
+
+}
+
+main{
+
+    background-color: lightgray;
+    
+}
+
+main h2{
+
+    border-bottom: dotted;
+    padding: 20px;
+}
+
+aside{
+
+    background-color: lightgrey;
+    padding: 10px;
+    color: #000;
+
+}
+
+main img{
+
+word-wrap: normal;
+float: left;
+
+}
+
+footer{
+
+    background-color: lightgrey;
+    border: 3px #886644;
+    
+    
+}
+
+
+
+
+
 
