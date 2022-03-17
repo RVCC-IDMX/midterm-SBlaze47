@@ -5,9 +5,10 @@ header{
 
     text-align: center;
     font-size: 25px;
-    background-image: url(/img/cave.jpg);
     color: white;
     padding: 30px;
+    background-image: url(/img/cave.jpg);
+    grid-area: header;
 }
 
 nav{
@@ -16,13 +17,47 @@ nav{
     box-shadow: inset 3px 3px 10px 5px #000;
     background-color: lightgray;
     
+    
+    
+}
+
+nav a:link{ 
+    
+    color:black;
+    text-decoration: none;
+
+}
+
+nav a:hover {
+
+    color: #a52a2a;
+    text-decoration: underline;
+}
+
+nav a:active {
+
+    color: black;
+    text-decoration: none;
+
+}
+
+nav a:visited{
+
+    color:#a52a2a;
+    text-decoration: underline;
+
+}
+
+[lang=fr], [lang=is], [lang=it]{
+
+    font-style: italic;
 }
 
 nav li{
 
     padding: 10px;
     display: inline-block; /* https://css-tricks.com/snippets/css/cross-browser-inline-block/ */
-
+    
 }
 
 main{
@@ -47,9 +82,28 @@ aside{
     color: #000;
     box-shadow: inset 3px 3px 10px 5px #000;
     border: 3px solid #886644;
+    
 
    
 }
+
+.submission{
+    border: 3px solid black;
+    padding: 10px;
+    margin: 6px;
+    background-color: white;
+}
+
+.opinion{
+    padding: 10px;
+}
+
+.signature{
+    text-align: center;
+    font-style: italic;
+}
+
+
 
 aside h2{
 
@@ -62,8 +116,12 @@ aside h2{
 
 word-wrap: normal;
 float: left;
-
+width: 300px;
+padding: 5px;
 }
+
+
+
 
 footer{
 
@@ -77,13 +135,39 @@ footer{
 
 body{
 
-    background-color: #765729;
+    background-image: linear-gradient(to bottom, #765729, #000);
+    display: grid;
+
+    /*
+    grid-template-areas: "header" "nav" "main" "bob" "footer";
+    grid-template-columns: 1fr;
+    */
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "header header" 
+        "nav nav" 
+        "main bob" 
+        "footer footer";
+
 }
 
-main li{
-
-    font-weight: bold;
+header {
+    grid-area:header;
 }
+nav {
+    grid-area:nav;
+}
+main {
+    grid-area:main;
+}
+aside {
+    grid-area:bob;
+}
+footer {
+    grid-area:footer;
+}
+
 
 #cryptogram{
 
@@ -95,6 +179,11 @@ figcaption {
 font-style: italic;
 
 }
+
+.character{
+    font-weight: bold;
+}
+
 
 
 
