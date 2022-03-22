@@ -7,8 +7,15 @@ header{
     font-size: 25px;
     color: white;
     padding: 30px;
-    background-image: url(/img/cave.jpg);
+    background-image: url(/midterm-SBlaze47/img/cave.jpg);
     grid-area: header;
+    box-shadow: inset 20px 20px 20px 20px #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-size: 100%;
+    background-position: center;
+    padding: 0px;
+
 }
 
 nav{
@@ -59,6 +66,12 @@ nav li{
     padding: 10px;
     display: inline-block; /* https://css-tricks.com/snippets/css/cross-browser-inline-block/ */
     grid-template-rows: 1fr 1fr 1fr;
+    border-right: #765729 5px double;
+}
+
+nav li:last-child{
+
+    border: none;
 }
 
 main{
@@ -67,7 +80,14 @@ main{
     box-shadow: inset 3px 3px 10px 5px;
     border: 3px solid #886644;
     margin-top: 5px;
+
     
+    
+}
+
+main p:first-of-type::first-line{
+
+    font-size: 130%;
 }
 
 main h2{
@@ -75,6 +95,10 @@ main h2{
     border-bottom: dotted;
     padding: 20px;
 }
+
+
+
+
 
 aside{
 
@@ -85,10 +109,11 @@ aside{
     border: 3px solid #886644;
     margin-top: 5px;
     margin-left: 5px;
-    
 
-   
+
 }
+
+
 
 .submission{
     border: 3px solid black;
@@ -119,7 +144,7 @@ aside h2{
 
 word-wrap: normal;
 float: left;
-width: 200px;
+width: 170px;
 padding: 15px;
 }
 
@@ -133,6 +158,8 @@ footer{
     text-align: center;
     box-shadow: inset 3px 3px 10px 5px #000;
     margin-top: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;
    
 }
 
@@ -163,14 +190,14 @@ body{
     /*
     grid-template-areas: "header" "nav" "main" "bob" "footer";
     grid-template-columns: 1fr;
-    */
+    
 
     grid-template-columns: 3fr 1fr;
     grid-template-areas: 
         "header header" 
         "nav nav" 
         "main bob" 
-        "footer footer";
+        "footer footer";*/
 
 }
 
@@ -206,6 +233,60 @@ font-style: italic;
     font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+
+    header h1{
+        font-size:3rem;
+
+    }
+
+    aside {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    aside h2{
+
+        grid-column: 1/-1;
+    }
+
+    aside .signature{
+
+        text-align:center;
+    }
+
+    aside .opinion {
+
+        text-align:center;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+    body {
+
+        display: grid;
+        grid-template-columns: auto 20rem;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer"
+        ;
+
+    }
+
+    header{grid-area: header;}
+    nav{grid-area: nav; }
+    main{grid-area: main;}
+    aside{grid-area: nav;}
+    footer{grid-area: footer;}
+}
+    
+
+    
 
 
 
